@@ -3,12 +3,7 @@ ARG USERNAME=amstrad
 ARG USERPASS=amstrad
 ENV TZ=Europe/Minsk
 ENV DEBIAN_FRONTEND=noninteractive 
-RUN apt-get update && apt-get install -y openssh-server sudo pasmo build-essential bison flex libxml2-dev && \
-    subversion zlib1g-dev m4 ragel re2c dos2unix texinfo texi2html gdb curl perl cpanminus ccache libboost-all-dev && \
-    libmodern-perl-perl libyaml-perl liblocal-lib-perl libcapture-tiny-perl libpath-tiny-perl libtext-table-perl && \
-    libdata-hexdump-perl libregexp-common-perl libclone-perl libfile-slurp-perl pkg-config flex vim bison libboost-dev && \
-    libfreeimage-dev wine mono-complete curl unzip zip git openjdk-8-jdk groovy whois zsh-syntax-highlighting locales python3-pip && \
-    zsh fonts-powerline nano
+RUN apt-get update && apt-get install -y openssh-server sudo pasmo build-essential bison flex libxml2-dev subversion zlib1g-dev m4 ragel re2c dos2unix texinfo texi2html gdb curl perl cpanminus ccache libboost-all-dev libmodern-perl-perl libyaml-perl liblocal-lib-perl libcapture-tiny-perl libpath-tiny-perl libtext-table-perl libdata-hexdump-perl libregexp-common-perl libclone-perl libfile-slurp-perl pkg-config flex vim bison libboost-dev libfreeimage-dev wine mono-complete curl unzip zip git openjdk-8-jdk groovy whois zsh-syntax-highlighting locales python3-pip zsh fonts-powerline nano
 RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
     dpkg-reconfigure --frontend=noninteractive locales && \
     update-locale LANG=en_US.UTF-8
