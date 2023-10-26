@@ -10,7 +10,7 @@ on:
     tags:
       - v*
 env:
-  IMAGE_NAME:  cpcready/docker-z88dk-library-image
+  IMAGE_NAME:  docker-z88dk-library-image
 
 jobs:
   push:
@@ -28,8 +28,7 @@ jobs:
 
       - name: Push image
         run: |
-          IMAGE_ID=ghcr.io/${{ github.repository }}/$IMAGE_NAME
-
+          IMAGE_ID=ghcr.io/${{ github.repository }}
           # Change all uppercase to lowercase
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
 
