@@ -10,7 +10,7 @@ on:
     tags:
       - v*
 env:
-  IMAGE_NAME:  docker-z88dk-library-image
+  IMAGE_NAME:  sdk-develop
 
 jobs:
   push:

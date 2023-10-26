@@ -2,8 +2,8 @@
 
 ## Compilar Dokerfile:
 ```
-docker image build -t docker-z88dk-library-image:v0.0.1 .
-docker run -it --entrypoint /bin/zsh docker-z88dk-library-image:v0.0.1
+docker image build -t sdk-develop:v0.0.1 .
+docker run -it --entrypoint /bin/zsh sdk-develop:v0.0.1
 ```
 ## Tag image
 ```
