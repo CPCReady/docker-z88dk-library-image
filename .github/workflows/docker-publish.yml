@@ -10,7 +10,7 @@ on:
     tags:
       - v*
 env:
-  IMAGE_NAME:  ${{ github.repository }}
+  IMAGE_NAME:  cpcready/docker-z88dk-library-image
 
 jobs:
   push:
